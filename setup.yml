@@ -1,0 +1,8 @@
+---
+- hosts: all
+
+- name: Setup Ubuntu ELK
+  include: install.yml
+
+- name: Setup CentOs ELK
+  include: installcent.yml

@@ -1,0 +1,14 @@
+- name: Logstash repo key
+  rpm_key: 
+    key="https://packages.elastic.co/GPG-KEY-elasticsearch"
+    state=present
+
+- name: Enable Logstash repo
+  template:
+    src=logstash_repo.j2
+    dest=/etc/yum.repos.d/logstash.repo
+
+- name: Install Logstash 
+  yum:
+    name=logstash
+    state=latest

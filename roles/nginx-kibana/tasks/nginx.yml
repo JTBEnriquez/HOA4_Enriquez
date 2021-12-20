@@ -1,0 +1,2 @@
+- name: Install Nginx repo for CentOS 8
+  rpm_key: key="http://nginx.org/keys/nginx_signing.key"
